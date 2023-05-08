@@ -147,8 +147,10 @@ class MateriasC{
             $tablaBD = "comisiones";
 
             $id = $_GET["Cid"];
+            var_dump($id);
 
             $Mid = $_GET["Mid"];
+            var_dump($Mid);
 
             $resultado = MateriasM::BorrarComisionM($tablaBD, $id);
 

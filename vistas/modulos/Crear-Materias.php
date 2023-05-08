@@ -94,7 +94,7 @@ if($_SESSION["rol"] != "Administrador"){
 										
 										<div class="btn-group">
 											
-											<a href="http://localhost/universidad/Crear-Comisiones/'.$value["id"].'">
+											<a href="http://localhost/learnphp/gestionU/Crear-Comisiones/'.$value["id"].'">
 												<button class="btn btn-default">Comisiones</button>
 											</a>
 
