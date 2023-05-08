@@ -11,5 +11,8 @@ require_once "modelos/carrerasM.php";
 require_once "controladores/ajustesC.php";
 require_once "modelos/ajustesM.php";
 
+require_once "controladores/materiasC.php";
+require_once "modelos/materiasM.php";
+
 $plantilla = new Plantilla();
 $plantilla -> LlamarPlantilla();

@@ -63,7 +63,7 @@ if(isset($_SESSION["Ingresar"]) && $_SESSION["Ingresar"] == true){
 
         $url = explode("/", $_GET["url"]);
 
-        if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "mis-datos" || $url[0] == "Carreras" || $url[0] == "Editar-Carrera" || $url[0] == "usuarios" || $url[0] == "Estudiantes" || $url[0] == "Editar-Inicio"){
+        if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "mis-datos" || $url[0] == "Carreras" || $url[0] == "Editar-Carrera" || $url[0] == "usuarios" || $url[0] == "Estudiantes" || $url[0] == "Editar-Inicio" || $url[0] == "Crear-Materias"){
 
             include "modulos/".$url[0].".php";
 
@@ -123,6 +123,7 @@ if(isset($_SESSION["Ingresar"]) && $_SESSION["Ingresar"] == true){
 <!-- AdminLTE for demo purposes -->
 <script src="http://localhost/learnphp/gestionU/vistas/dist/js/demo.js"></script>
 <script src="http://localhost/learnphp/gestionU/vistas/js/usuarios.js"></script>
+<script src="http://localhost/learnphp/gestionU/vistas/js/materias.js"></script>
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree()

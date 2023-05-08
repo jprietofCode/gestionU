@@ -92,7 +92,7 @@ if($_SESSION["rol"] != "Administrador"){
 												<button class="btn btn-danger">Borrar</button>
 											</a>
 
-											<a href="#">
+											<a href="Crear-Materias/'.$value["id"].'">
 												<button class="btn btn-warning">Materias</button>
 											</a>
 
