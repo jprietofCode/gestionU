@@ -49,6 +49,7 @@ class CarrerasM extends ConexionBD{
         $pdo -> execute();
 
         $resultado = $pdo -> fetch();
+        //var_dump($resultado);
         $pdo = null;
         return $resultado;
     }

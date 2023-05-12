@@ -68,7 +68,7 @@ if($_SESSION["rol"] != "Administrador"){
 									<td>'.$value["apellido"].' '.$value["nombre"].'</td>
 
 									<td>
-										<a href="">
+										<a href="http://localhost/learnphp/gestionU/Ver-Plan/'.$value["id_carrera"].'/'.$value["libreta"].'">
 											<button class="btn btn-primary">Plan de Estudios</button>
 										</a>
 									</td>
