@@ -297,26 +297,24 @@ class MateriasC{
 
 
     public function BorrarInscMC(){
-
         $exp = explode("/", $_GET["url"]);
 
-        $id = $exp[3];
+        if (count($exp) >= 4) {
+            $id = $exp[3];
+            var_dump($id);
 
-        if(isset($id)){
+            if (isset($id)) {
+                $tablaBD = "insc_materias";
 
-            $tablaBD = "insc_materias";
+                $resultado = MateriasM::BorrarInscMM($tablaBD, $id);
+                var_dump($resultado);
 
-            $resultado = MateriasM::BorrarInscMM($tablaBD, $id);
-
-            if($resultado == true){
-
-                echo '<script>
-
-					window.location = "http://localhost/learnphp/gestionU/Materias";
-					</script>';
-
+                if ($resultado == true) {
+                    echo '<script>
+                        window.location = "http://localhost/learnphp/gestionU/Materias";
+                      </script>';
+                }
             }
-
         }
 
     }

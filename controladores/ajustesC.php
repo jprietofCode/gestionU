@@ -63,5 +63,27 @@ class AjustesC{
 
     }
 
+    public function HMC(){
+
+        if(isset($_POST["h_materias"])){
+
+            $tablaBD = "ajustes";
+
+            $datosC = array("id"=>1, "h_materias"=>$_POST["h_materias"]);
+
+            $resultado = AjustesM::HMM($datosC, $tablaBD);
+
+            if($resultado == true){
+
+                echo '<script>
+
+				window.location = "Carreras";
+				</script>';
+
+            }
+
+        }
+
+    }
 
 }

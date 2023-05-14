@@ -39,6 +39,22 @@ class CarrerasM extends ConexionBD{
         $pdo = null;*/
 
     }
+
+    static public function VerCarreras2M($tablaBD, $columna, $valor){
+        $conexion = new ConexionBD();
+        $pdo = $conexion->cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna" );
+        $pdo -> bindParam(":".$columna, $valor, PDO::PARAM_INT);
+        $pdo -> execute();
+        $resultado = $pdo->fetch();
+        //var_dump($resultado);
+        $pdo = null;
+        return $resultado;
+
+        /*$pdo -> close();
+        $pdo = null;*/
+
+    }
+
     //ver Carreras User
     static public function CarreraM($tablaBD, $columna, $valor){
         $conexion = new ConexionBD();

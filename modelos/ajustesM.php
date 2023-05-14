@@ -70,6 +70,23 @@ class AjustesM extends ConexionBD{
 
     }
 
+    static public function HMM($datosC, $tablaBD){
+        $respuesta = false;
+        $conexion = new ConexionBD();
+        $pdo = $conexion->cBD()->prepare("UPDATE $tablaBD SET h_materias = :h_materias WHERE id = :id");
 
+        $pdo -> bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+        $pdo -> bindParam(":h_materias", $datosC["h_materias"], PDO::PARAM_STR);
+
+        if($pdo -> execute()){
+            $respuesta = true;
+        }
+
+        //$pdo -> close();
+        $pdo = null;
+
+        return $respuesta;
+
+    }
 
 }

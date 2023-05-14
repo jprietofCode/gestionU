@@ -133,6 +133,21 @@ class UsuariosM extends ConexionBD{
 
     }
 
+    static public function VerUsuarios2M($tablaBD, $columna, $valor){
+        $conexion = new ConexionBD();
+        $pdo = $conexion->cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
+
+        $pdo -> bindParam(":".$columna, $valor, PDO::PARAM_STR);
+
+        $pdo -> execute();
+
+        $resultado = $pdo -> fetchAll();
+
+        //$pdo -> close();
+        $pdo = null;
+        return $resultado;
+
+    }
 
 
     //Actualizar Usuarios

@@ -172,6 +172,16 @@ class UsuariosC{
 
     }
 
+    static public function VerUsuarios2C($columna, $valor){
+
+        $tablaBD = "usuarios";
+
+        $resultado = UsuariosM::VerUsuarios2M($tablaBD, $columna, $valor);
+
+        return $resultado;
+
+    }
+
 
     //Actualizar Usuarios
     public function ActualizarUsuariosC(){

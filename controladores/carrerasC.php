@@ -40,6 +40,17 @@ class CarrerasC{
 
     }
 
+    static public function VerCarreras2C($columna, $valor){
+
+        $tablaBD = "carreras";
+
+        $resultado = CarrerasM::VerCarreras2M($tablaBD, $columna, $valor);
+
+        //var_dump($resultado);
+        return $resultado;
+
+    }
+
     //ver Carreras User
     static public function CarreraC($columna, $valor){
         $tablaBD = "carreras";

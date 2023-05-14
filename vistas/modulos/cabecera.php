@@ -39,6 +39,12 @@
 
                                 echo '<p>'.$_SESSION["apellido"]." ".$_SESSION["nombre"].' - Administrador</p>';
 
+                            }else{
+                                echo '<p>'.$_SESSION["apellido"]." ".$_SESSION["nombre"].'- Libreta: '.$_SESSION["libreta"].'</p>';
+                                $columna = "id";
+                                $valor = $_SESSION["id_carrera"];
+                                $carrera = CarrerasC::VerCarreras2C($columna, $valor);
+                                echo '<p>'.$carrera["nombre"].'</p>';
                             }
 
                             ?>
