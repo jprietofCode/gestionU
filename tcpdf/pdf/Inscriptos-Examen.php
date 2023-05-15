@@ -1,13 +1,13 @@
 <?php
 
-require_once "../../Controladores/materiasC.php";
-require_once "../../Modelos/materiasM.php";
+require_once "../../controladores/materiasC.php";
+require_once "../../modelos/materiasM.php";
 
-require_once "../../Controladores/usuariosC.php";
-require_once "../../Modelos/usuariosM.php";
+require_once "../../controladores/usuariosC.php";
+require_once "../../modelos/usuariosM.php";
 
-require_once "../../Controladores/examenesC.php";
-require_once "../../Modelos/examenesM.php";
+require_once "../../controladores/examenesC.php";
+require_once "../../modelos/examenesM.php";
 
 class pdfInscriptosExamen{
 
@@ -26,7 +26,7 @@ $link = $_SERVER['REQUEST_URI'];
 $exp = explode("/", $link);
 
 $columna = "id";
-$valor = $exp[5];
+$valor = $exp[6];
 
 $examen = ExamenesC::VerExamenesC($columna, $valor);
 
@@ -63,7 +63,7 @@ $pdf->writeHTML($html1, false, false, false, false, '');
 
 
 $columna = "id_examen";
-$valor = $exp[5];
+$valor = $exp[6];
 
 $insc = ExamenesC::VerInscExamenC($columna, $valor);
 

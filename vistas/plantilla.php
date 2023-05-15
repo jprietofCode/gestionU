@@ -67,7 +67,7 @@ if(isset($_SESSION["Ingresar"]) && $_SESSION["Ingresar"] == true){
 
         $url = explode("/", $_GET["url"]);
 
-        if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "mis-datos" || $url[0] == "Carreras" || $url[0] == "Editar-Carrera" || $url[0] == "usuarios" || $url[0] == "Estudiantes" || $url[0] == "Editar-Inicio" || $url[0] == "Crear-Materias" || $url[0] == "Crear-Comisiones" || $url[0] == "Ver-Plan" || $url[0] == "Nota-Materia" || $url[0] == "Editar-Nota" || $url[0] == "Plan-de-Estudios" || $url[0] == "Materias" || $url[0] == "insc-materia" || $url[0] == "inscripto-M"){
+        if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "mis-datos" || $url[0] == "Carreras" || $url[0] == "Editar-Carrera" || $url[0] == "usuarios" || $url[0] == "Estudiantes" || $url[0] == "Editar-Inicio" || $url[0] == "Crear-Materias" || $url[0] == "Crear-Comisiones" || $url[0] == "Ver-Plan" || $url[0] == "Nota-Materia" || $url[0] == "Editar-Nota" || $url[0] == "Plan-de-Estudios" || $url[0] == "Materias" || $url[0] == "insc-materia" || $url[0] == "inscripto-M" || $url[0] == "Examenes" || $url[0] == "Crear-Examenes" || $url[0] == "C-E" || $url[0] == "Ver-Examenes" || $url[0] == "insc-examen" || $url[0] == "Inscriptos-examen"){
 
             include "modulos/".$url[0].".php";
 

@@ -27,7 +27,9 @@
             </li>
 
             <li>
-                <a href="http://localhost/learnphp/gestionU/ver-examenes">
+                <?php
+                echo '<a href="http://localhost/learnphp/gestionU/Ver-Examenes/'.$_SESSION["id_carrera"].'">';
+                ?>
                     <i class="fa fa-university"></i>
                     <span>Exámenes</span>
                 </a>

@@ -26,7 +26,7 @@
             </li>
 
             <li>
-                <a href="http://localhost/learnphp/gestionU/">
+                <a href="http://localhost/learnphp/gestionU/Examenes">
                     <i class="fa fa-home"></i>
                     <span>Exámenes</span>
                 </a>
