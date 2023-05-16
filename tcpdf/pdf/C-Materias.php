@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../Controladores/materiasC.php";
-require_once "../../Modelos/materiasM.php";
+require_once "../../controladores/materiasC.php";
+require_once "../../modelos/materiasM.php";
 
-require_once "../../Controladores/usuariosC.php";
-require_once "../../Modelos/usuariosM.php";
+require_once "../../controladores/usuariosC.php";
+require_once "../../modelos/usuariosM.php";
 
 
 class pdfCMaterias{
@@ -24,7 +24,7 @@ $link = $_SERVER['REQUEST_URI'];
 $exp = explode("/", $link);
 
 $columna = "id";
-$valor = $exp[5];
+$valor = $exp[6];
 
 $alumno = UsuariosC::VerUsuariosC($columna, $valor);
 
@@ -55,8 +55,8 @@ EOF;
 
 
 $pdf->writeHTML($html1, false, false, false, false, '');
-
-$materias = MateriasC::VerMateriasC();
+$materia = new MateriasC();
+$materias = $materia->VerMateriasC();
 
 foreach ($materias as $key => $value) {
 	

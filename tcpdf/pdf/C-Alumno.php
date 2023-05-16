@@ -20,7 +20,7 @@ $link = $_SERVER['REQUEST_URI'];
 $exp = explode("/", $link);
 
 $columna = "id";
-$valor = $exp[5];
+$valor = $exp[6];
 
 $alumno = UsuariosC::VerUsuariosC($columna, $valor);
 

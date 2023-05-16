@@ -33,7 +33,7 @@
             </li>
 
             <li>
-                <a href="http://localhost/learnphp/gestionU/">
+                <a href="http://localhost/learnphp/gestionU/Certificados">
                     <i class="fa fa-home"></i>
                     <span>Certificados</span>
                 </a>

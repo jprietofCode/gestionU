@@ -17,5 +17,8 @@ require_once "modelos/materiasM.php";
 require_once "controladores/examenesC.php";
 require_once "modelos/examenesM.php";
 
+require_once "controladores/certificadosC.php";
+require_once "modelos/certificadosM.php";
+
 $plantilla = new Plantilla();
 $plantilla -> LlamarPlantilla();
